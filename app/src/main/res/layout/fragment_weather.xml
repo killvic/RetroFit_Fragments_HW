@@ -7,25 +7,57 @@
     android:layout_height="match_parent"
     tools:context=".WeatherFragment.WeatherFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="WEATHER FRAGMENT"
-        android:textSize="38sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCurWeather"
+        android:layout_width="158dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="159dp"
+        android:background="@drawable/round_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:id="@+id/ivImage"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        <TextView
+            android:id="@+id/tvCurTemp"
+            android:layout_width="86dp"
+            android:layout_height="58dp"
+            android:text="NN"
+            android:textSize="48sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMaxMinTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="max\min"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurTemp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvCurLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginTop="18sp"
+        android:text="City, Country"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/clCurWeather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:textSize="14sp"
+        android:text="Day, Nth Month Year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurLocation" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
